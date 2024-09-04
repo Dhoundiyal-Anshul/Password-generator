@@ -45,8 +45,8 @@ function App() {
             Copy
           </button>
         </div>
-        <div className="flex texy-sm gap-x-2">
-          <div className="flex items-center gap-x-1">
+        <div className="flex flex-wrap texy-sm gap-x-2 items-center">
+          <div className="flex flex-wrap items-center gap-x-1">
             <input
               type="range"
               min={6}
@@ -59,24 +59,28 @@ function App() {
             />
             <label>Length:{length}</label>
           </div>
-          <input
-            type="checkbox"
-            defaultChecked={number}
-            id="numberInput"
-            onChange={() => {
-              setnumber((prev) => !prev);
-            }}
-          />
-          <label htmlFor="number">Numbers</label>
-          <input
-            type="checkbox"
-            defaultChecked={character}
-            id="characterInput"
-            onChange={() => {
-              setCharacter((prev) => !prev);
-            }}
-          />
-          <label htmlFor="character">Characters</label>
+          <div className="flex flex-wrap items-center gap-x-1">
+            <input
+              type="checkbox"
+              defaultChecked={number}
+              id="numberInput"
+              onChange={() => {
+                setnumber((prev) => !prev);
+              }}
+            />
+            <label htmlFor="number">Numbers</label>
+          </div>
+          <div className="flex flex-wrap items-center gap-x-1">
+            <input
+              type="checkbox"
+              defaultChecked={character}
+              id="characterInput"
+              onChange={() => {
+                setCharacter((prev) => !prev);
+              }}
+            />
+            <label htmlFor="character">Characters</label>
+          </div>
         </div>
       </div>
     </div>
